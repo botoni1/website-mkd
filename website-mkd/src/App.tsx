@@ -188,7 +188,7 @@ function Navbar() {
             ))}
             <a
               href="tel:+38923294700"
-              onClick={(e) => { setMobileOpen(false); const r = useRipple(); r(e); }}
+              onClick={(e) => { setMobileOpen(false); ripple(e); }}
               className="ripple-container mt-2 px-5 py-3 bg-gradient-to-r from-primary-500 to-primary-600 text-white font-bold rounded-lg text-center inline-flex items-center justify-center gap-2 btn-press"
             >
               <Phone className="w-4 h-4" />
@@ -203,6 +203,7 @@ function Navbar() {
 
 /* ─────────────────── Hero Section ─────────────────── */
 function Hero() {
+  const ripple = useRipple();
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Video Background */}
@@ -252,7 +253,7 @@ function Hero() {
           <div className="flex flex-wrap gap-4">
             <a
               href="tel:+38923294700"
-              onClick={(e) => { const r = useRipple(); r(e); }}
+              onClick={ripple}
               className="ripple-container group inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-primary-500 to-primary-600 text-white font-bold rounded-xl hover:from-primary-400 hover:to-primary-500 transition-all shadow-2xl shadow-primary-500/25 hover:shadow-primary-500/40 text-lg btn-press pulse-glow"
             >
               <Phone className="w-5 h-5" />
@@ -823,7 +824,7 @@ function WorkingHours() {
               {/* Map */}
               <div className="relative w-full flex-1 min-h-[400px]">
                 <iframe
-                  src="https://maps.google.com/maps?q=dpf.mk+Скопје+Македонија&t=m&z=15&ie=UTF8&iwloc=&output=embed"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2964.0!2d21.4254!3d41.9981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135415f06a219ce9%3A0x45c4a1c2c8e28e2e!2z0JjQvdC00YPRgdGC0YDQuNGY0YHQutCwIDQ4LzIwLCDQodC60L7Qv9C1IDEwMDA!5e0!3m2!1smk!2smk!4v1700000000000!5m2!1smk!2smk"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
